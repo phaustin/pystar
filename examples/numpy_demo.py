@@ -1,39 +1,42 @@
 """
 
-Create a numpy array of 64 bit floats
+Create a numpy array of 32 bit floats
+and square it
 
->>> a=[1,2,3,4]
+>>> import numpy as np
+>>> a=np.array([1,2,3,4],dtype=np.float32)
+>>> a**2.
+array([  1.,   4.,   9.,  16.], dtype=float32)
 
-indexing starts at zero
-and covers the open interval [first,last)
 
->>> a[0:]
-[1, 2, 3, 4]
+Create an vector of 100 values spaced evenly between
+5 and 75:
 
->>> a[:]
-[1, 2, 3, 4]
+>>> a=np.linspace(5,75,100)
 
->>> a[-1]
-4
+Find the index of the value closes to 28.5
 
-index ranges are called "slices"
+>>> the_diff=(a - 28.5)**2.
+>>> np.argmin(the_diff)
+33
+>>> a[33]
+28.333333333333332
 
->>> a[0:2]
-[1, 2]
 
-you can index relative to beginning or end
+how many values are there between 20 and 30,
+inclusive?
 
->>> a[-2:]
-[3, 4]
+>>> hit = np.logical_and(a >= 20, a <= 30)
+>>> np.sum(hit)
+14
 
-and slices are objects
+what is their median?
 
->>> endslice=slice(-2,None)
->>> a[endslice]
-[3, 4]
+>>> np.median(a[hit])
+25.151515151515152
+
 """
 
 if __name__ == "__main__":
-    import numpy as np
     import doctest
     doctest.testmod()
