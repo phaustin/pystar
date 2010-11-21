@@ -17,7 +17,7 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   lists
+   data_types
 
 Indices and tables
 ==================
