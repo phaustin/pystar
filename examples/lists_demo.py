@@ -7,33 +7,28 @@ Here is a python list
 
 >>> a=[1,2,3,4]
 
-indexing starts at zero
-and covers the open interval [first,last)
+Lists are mutable:
 
->>> a[0:]
+>>> a.append(5)
+>>> a
+[1, 2, 3, 4, 5]
+>>> a.pop(-1)
+5
+>>> a
 [1, 2, 3, 4]
+>>> a.reverse()
+>>> a
+[4, 3, 2, 1]
 
->>> a[:]
-[1, 2, 3, 4]
+Lists can't be used as dictionary keys
 
->>> a[-1]
-4
+>>> the_dict={}
+>>> the_dict[[0,1,2]]='first entry'
+Traceback (most recent call last):
+  File "<ipython console>", line 1, in <module>
+TypeError: list objects are unhashable
 
-index ranges are called "slices"
 
->>> a[0:2]
-[1, 2]
-
-you can index relative to beginning or end
-
->>> a[-2:]
-[3, 4]
-
-and slices are objects
-
->>> endslice=slice(-2,None)
->>> a[endslice]
-[3, 4]
 """
 
 if __name__ == "__main__":

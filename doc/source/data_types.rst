@@ -1,5 +1,15 @@
-Data types
-==========
+Core language
+=============
+
+Data Types
+++++++++++
+
+Tuples
+------
+
++ Here is the doctest for `tuples_demo.py <https://github.com/phaustin/pystar/blob/master/examples/tuples_demo.py>`_
+
+  .. automodule:: examples.tuples_demo
 
 
 Lists
@@ -13,12 +23,4 @@ http://effbot.org/zone/python-list.htm
   .. automodule:: examples.lists_demo
 
 
-Examples from examples/numpy_demo.py
-------------------------------------
-
-
-+ Here is the doctest for `lists_demo.py <https://github.com/phaustin/pystar/blob/master/examples/numpy_demo.py>`_
-
-
-  .. automodule:: examples.numpy_demo
 

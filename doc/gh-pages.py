@@ -65,14 +65,15 @@ def sh3(cmd):
 
 
 def render_htmlindex(fname, tag):
-    rel = '<li> Release: <a href="{t}/index.html">{t}</a>'.format(t=tag)
-    rep = re.compile('<!-- RELEASE -->')
+    rel = '<li> Current Release: <a href="{t}/index.html">{t}</a> </li>'.format(t=tag)
+    rep = re.compile('Current Release:')
     out = []
     with file(fname) as f:
         for line in f:
-            out.append(line)
             if rep.search(line):
-                out.append(rep.sub(rel, line))
+                out.append(rel)
+            else:
+                out.append(line)
     return ''.join(out)
 
 

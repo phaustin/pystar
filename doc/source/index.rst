@@ -15,9 +15,14 @@ http://phaustin.github.com/pystar-doc
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   data_types
+   core_language
+   libraries
+   
+
+
+
 
 Indices and tables
 ==================
